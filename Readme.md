@@ -24,6 +24,8 @@ s3credentialsFile := Some("/funny/absolute/path/to/credentials.properties")
 
 and don't forget to **add it to you `.gitignore`** file, so that you won't publish this file anywhere.
 
+If you don't set the `s3credentialsFile` setting to a valid file, the plugin will try to lookup the credentials using the [DefaultAWSCredentialsProviderChain](http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/auth/DefaultAWSCredentialsProviderChain.html) class provided by the AWS Java SDK.
+
 The file with actual credentials should contain the access key and secret key of your AWS account (or that of an IAM user), in the following format:
 
 ```
